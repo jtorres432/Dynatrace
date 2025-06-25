@@ -4,14 +4,14 @@
   tasks:
    - name: Crea directorio
      file:
-       path: /discolleno
+       path: /home/ec2-user/discolleno
        state: directory
    - name: Info del disco
-     shell: "df -h /discolleno"
+     shell: "df -h /home/ec2-user/discolleno"
    - name: Limpia disco
-     shell: "rm -rf /discolleno/*"
+     shell: "rm -rf /home/ec2-user/discolleno/*"
    - name: Espera
      wait_for:
        timeout: 30
    - name: Llena disco
-     shell: "fallocate -l 1.5G /discolleno/datos"
+     shell: "fallocate -l 1.5G /home/ec2-user/discolleno/datos"
