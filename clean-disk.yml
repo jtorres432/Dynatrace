@@ -2,6 +2,11 @@
  - name: Playbook que limpia disco lleno
    hosts: debian
    tasks:
+    - name: Crea directorio
+      file:
+        dir: /discolleno
+       state: present
+   
     - name: Info del disco
       shell: "df -h /discolleno"
 
