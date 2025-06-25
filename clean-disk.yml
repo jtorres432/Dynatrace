@@ -4,8 +4,8 @@
   tasks:
     - name: Crea directorio
       file:
-        dir: /discolleno
-      state: present
+      path: /discolleno
+      state: directory
     - name: Info del disco
       shell: "df -h /discolleno"
     - name: Limpia disco
