@@ -1,21 +1,17 @@
 ---
- - name: Playbook que limpia disco lleno
-   hosts: all
-   tasks:
+- name: Playbook que limpia disco lleno
+  hosts: all
+  tasks:
     - name: Crea directorio
       file:
         dir: /discolleno
-       state: present
-   
+      state: present
     - name: Info del disco
       shell: "df -h /discolleno"
-
     - name: Limpia disco
       shell: "rm -rf /discolleno/*"
-
     - name: Espera
       wait_for:
         timeout: 30
-
     - name: Llena disco
       shell: "fallocate -l 1.5G /discolleno/datos"
