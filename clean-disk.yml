@@ -1,0 +1,16 @@
+---
+ - name: Playbook que limpia disco lleno
+   hosts: debian
+   tasks:
+    - name: Info del disco
+      shell: "df -h /discolleno"
+
+    - name: Limpia disco
+      shell: "rm -rf /discolleno/*"
+
+    - name: Espera
+      wait_for:
+        timeout: 30
+
+    - name: Llena disco
+      shell: "fallocate -l 1.5G /discolleno/datos"
