@@ -1,6 +1,6 @@
 ---
  - name: Playbook que limpia disco lleno
-   hosts: debian
+   hosts: all
    tasks:
     - name: Crea directorio
       file:
