@@ -14,4 +14,4 @@
      wait_for:
        timeout: 30
    - name: Llena disco
-     shell: "fallocate -l 1.5G /home/ec2-user/discolleno/datos"
+     shell: "fallocate -l 80M /home/ec2-user/discolleno/datos"
