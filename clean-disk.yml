@@ -1,5 +1,6 @@
 ---
 - name: Playbook que limpia disco lleno
+  become: true
   hosts: all
   tasks:
    - name: Crea directorio
