@@ -1,5 +1,5 @@
 ---
-- name: Playbook que limpia disco lleno
+- name: Playbook que llena el disco
   become: true
   hosts: all
   tasks:
