@@ -11,8 +11,3 @@
      shell: "df -h /home/ec2-user/discolleno"
    - name: Limpia disco
      shell: "rm -rf /home/ec2-user/discolleno/*"
-   - name: Espera
-     wait_for:
-       timeout: 30
-   - name: Llena disco
-     shell: "fallocate -l 75M /home/ec2-user/discolleno/datos"
