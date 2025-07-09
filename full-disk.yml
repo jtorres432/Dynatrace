@@ -1,0 +1,2 @@
+   - name: Llena disco
+     shell: "fallocate -l 75M /home/ec2-user/discolleno/datos"
