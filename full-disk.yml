@@ -3,5 +3,5 @@
   become: true
   hosts: all
   tasks:
-  - name: Llena disco
+   - name: Llena disco
      shell: "fallocate -l 75M /home/ec2-user/discolleno/datos"
