@@ -4,4 +4,4 @@
   hosts: all
   tasks:
    - name: Llena disco
-     shell: "fallocate -l 75M /home/ec2-user/discolleno/datos"
+     shell: "fallocate -l 15G  /tmp/backup"
