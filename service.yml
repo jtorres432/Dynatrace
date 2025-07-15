@@ -1,0 +1,9 @@
+---
+- name: Playbook que inicia un servicio
+  become: true
+  hosts: all
+  tasks:
+   - name: Inicia el servicio chronyd
+     ansible.builtin.service:
+       name: chronyd
+       state: started
