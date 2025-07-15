@@ -5,9 +5,9 @@
   tasks:
    - name: Crea directorio
      file:
-       path: /home/ec2-user/discolleno
+       path:  /tmp/backup
        state: directory
    - name: Info del disco
-     shell: "df -h /home/ec2-user/discolleno"
+     shell: "df -h  /tmp/backup"
    - name: Limpia disco
-     shell: "rm -rf /home/ec2-user/discolleno/*"
+     shell: "rm -rf  /tmp/backup/*"
