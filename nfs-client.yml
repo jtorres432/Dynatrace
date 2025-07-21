@@ -5,7 +5,7 @@
   tasks:
    - name:
      file:
-       pah: /tmp/backup/datos/
+       path: /tmp/backup/datos/
        state: directory
        mode: "0755"
    - name: Monta el nfs
