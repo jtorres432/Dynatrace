@@ -1,0 +1,11 @@
+---
+- name: Playbook que configura el cliente nfs
+  become: true
+  hosts: all
+  tasks:
+   - name: Monta el nfs
+     mount:
+       src: node2:/mnt/datos/
+       fstype: nfs
+       state: mounted
+       opts: "defaults,_netdev"
