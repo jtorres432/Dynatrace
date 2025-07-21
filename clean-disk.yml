@@ -4,4 +4,4 @@
   hosts: all
   tasks:
    - name: Limpia disco
-     shell: "rm -rf  /tmp/backup/datos/*"
+     shell: "rm -rf  /tmp/backup/*"
