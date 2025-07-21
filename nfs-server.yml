@@ -1,0 +1,24 @@
+---
+- name: Playbook que prepara el nfs server
+  become: true
+  hosts: all
+  tasks:
+   - name: Instala nfs-utils
+     yum:
+       name:  nfs-utils
+       state: latest
+   - name: Crea el directorio a montar
+     file:
+       path: 
+       mode: '0755'
+       state: directory
+   - name: Cofigura el /etc/exports
+     lineinfile:
+       path: /etc/exports
+       line: "/    *(rw,no_root_squash)"
+   - name: Firewalld
+     firewalld:
+       service: nfs
+       state: enabled
+       permanent: true
+       immediate: true
