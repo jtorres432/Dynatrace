@@ -7,6 +7,10 @@
      yum:
        name:  nfs-utils
        state: latest
+   - name: Inicia el servicio
+     service:
+       name: nfs-server
+       state: enabled
    - name: Crea el directorio a montar
      file:
        path: /mnt/datos/
