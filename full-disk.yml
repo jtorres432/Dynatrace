@@ -4,4 +4,4 @@
   hosts: all
   tasks:
    - name: Llena disco
-     shell: "fallocate -l 15G  /tmp/backup/datos"
+     shell: "fallocate -l 15G  /mnt/node2_datos/datos"
