@@ -3,6 +3,10 @@
   become: true
   hosts: all
   tasks:
+   - name: Instala nfs-utils
+     yum:
+       name:  nfs-utils
+       state: latest
    - name:
      file:
        path: /tmp/backup/datos/
