@@ -9,7 +9,7 @@
        state: latest
    - name: Crea el directorio a montar
      file:
-       path: /mnt/datos
+       path: /mnt/datos/
        mode: '0755'
        state: directory
    - name: Cofigura el /etc/exports
