@@ -3,11 +3,5 @@
   become: true
   hosts: all
   tasks:
-   - name: Crea directorio
-     file:
-       path:  /tmp/backup
-       state: directory
-   - name: Info del disco
-     shell: "df -h  /tmp/backup"
    - name: Limpia disco
-     shell: "rm -rf  /tmp/backup/*"
+     shell: "rm -rf  /tmp/backup/datos/*"
