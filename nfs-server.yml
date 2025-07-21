@@ -16,9 +16,4 @@
      lineinfile:
        path: /etc/exports
        line: "/mnt/datos    *(rw,no_root_squash)"
-   - name: Firewalld
-     firewalld:
-       service: nfs
-       state: enabled
-       permanent: true
-       immediate: true
+
