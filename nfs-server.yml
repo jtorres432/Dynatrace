@@ -7,10 +7,6 @@
      yum:
        name:  nfs-utils
        state: latest
-   - name: Inicia el servicio
-     service:
-       name: nfs-server
-       state: started
    - name: Crea el directorio a montar
      file:
        path: /mnt/datos/
@@ -20,4 +16,7 @@
      lineinfile:
        path: /etc/exports
        line: "/mnt/datos    *(rw,no_root_squash)"
-
+   - name: Inicia el servicio
+     service:
+       name: nfs-server
+       state: started
