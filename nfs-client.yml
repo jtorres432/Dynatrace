@@ -3,9 +3,15 @@
   become: true
   hosts: all
   tasks:
+   - name:
+     file:
+       pah: /tmp/backup/datos/
+       state: directory
+       mode: "0755"
    - name: Monta el nfs
      mount:
        src: node2:/mnt/datos/
+       path: /tmp/backup/datos
        fstype: nfs
        state: mounted
        opts: "defaults,_netdev"
