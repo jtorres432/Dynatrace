@@ -9,13 +9,13 @@
        state: latest
    - name:
      file:
-       path: /tmp/backup/datos/
+       path: /tmp/backup/
        state: directory
        mode: "0755"
    - name: Monta el nfs
      mount:
        src: node2:/mnt/datos/
-       path: /tmp/backup/datos
+       path: /tmp/backup
        fstype: nfs
        state: mounted
        opts: "defaults,_netdev"
