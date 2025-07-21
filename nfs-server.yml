@@ -10,7 +10,7 @@
    - name: Inicia el servicio
      service:
        name: nfs-server
-       state: enabled
+       state: started
    - name: Crea el directorio a montar
      file:
        path: /mnt/datos/
