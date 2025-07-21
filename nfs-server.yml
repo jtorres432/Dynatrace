@@ -9,13 +9,13 @@
        state: latest
    - name: Crea el directorio a montar
      file:
-       path: 
+       path: /mnt/datos
        mode: '0755'
        state: directory
    - name: Cofigura el /etc/exports
      lineinfile:
        path: /etc/exports
-       line: "/    *(rw,no_root_squash)"
+       line: "/mnt/datos    *(rw,no_root_squash)"
    - name: Firewalld
      firewalld:
        service: nfs
