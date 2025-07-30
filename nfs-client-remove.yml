@@ -4,7 +4,10 @@
   hosts: all
   tasks:
    - name: Desmonta FS
-     shell: "umount /mnt/node2_datos"
+     mount:
+       path: /mnt/node2_datos
+       fstype: nfs
+       state: absent
    - name: Remove nfs-utils
      yum:
        name: nfs-utils
