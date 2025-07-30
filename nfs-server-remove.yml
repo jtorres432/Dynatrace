@@ -7,7 +7,7 @@
      service:
        name: nfs-server
        state: stopped
-     ignore_errors: true
+     ignore_errors: yes
    - name: Borra nfs-utils
      yum:
        name: nfs-utils
