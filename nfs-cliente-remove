@@ -1,0 +1,11 @@
+---
+- name: Playbook que borra la configuración NFS en cliente
+  become: true
+  hosts: all
+  tasks:
+   - name: Desmonta FS
+     shell: "umount /mnt/node2_datos"
+   - name: Remove nfs-utils
+     yum:
+       name: nfs-utils
+       state: absent
