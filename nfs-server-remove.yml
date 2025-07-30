@@ -1,0 +1,13 @@
+---
+- name: Playbook que remueve configuración de NFS en servidor
+  become: true
+  hosts: all
+  tasks:
+   - name: Baja el servicio
+     service:
+       name: nfs-server
+       state: stopped
+   - name: Borra nfs-utils
+     yum:
+       name: nfs-utils
+       state: absent
