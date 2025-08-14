@@ -1,0 +1,7 @@
+---
+- name: Playbook que desinstala agente
+  become: true
+  hosts: all
+  tasks:
+   - name: Desinstala agente
+     shell: 'sh /opt/dynatrace/oneagent/agent/uninstall.sh'
