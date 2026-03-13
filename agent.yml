@@ -4,7 +4,7 @@
   hosts: all
   tasks:
    - name: Descarga agente
-     shell: 'wget  -O Dynatrace-OneAgent-Linux-1.319.55.20250725-104938.sh "https://bht57484.apps.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?arch=x86" --header="Authorization: Api-Token dt0c01.RHX4WLNFXDG2RZKRWSIJMF45.EP46F64DWOV6T5ZLCIB4LVL55C3JM32EX42B2TMMWJ5RWQPWHKYODA5CWAHGI5B7"'
+     shell: 'wget  -O Dynatrace-OneAgent-Linux-1.331.49.20260227-104933.sh "https://bht57484.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?arch=x86" --header="Authorization: Api-Token dt0c01.GERYTVHJOCATC57CAMXCPXLH.N6JS3NMD25WPK76BMKNT3UMZMI2KCNQHTNQ6VDMDNGN5Y6UIUTF26CKTTEB32DHX"'
 
    - name: Instala agente
-     shell: 'sudo /bin/sh Dynatrace-OneAgent-Linux-1.319.55.20250725-104938.sh --set-monitoring-mode=fullstack --set-app-log-content-access=true'
+     shell: 'sudo /bin/sh Dynatrace-OneAgent-Linux-1.331.49.20260227-104933.sh --set-monitoring-mode=fullstack --set-app-log-content-access=true'
